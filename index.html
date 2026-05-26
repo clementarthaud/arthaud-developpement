@@ -7,6 +7,7 @@
   <meta name="description" content="Promotion immobilière sur la Côte d'Azur. Réhabilitation d'immeubles de caractère entre Antibes, Vieil Antibes et Nice. Découvrez nos opérations, biens disponibles et réalisations.">
   <meta name="theme-color" content="#FAFAF7">
 
+  <link rel="preload" as="image" href="assets/img/hero-poster.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -37,8 +38,8 @@
 
     <section class="hero" aria-label="Présentation Arthaud Développement">
       <div class="hero__media" aria-hidden="true">
-        <img src="assets/img/sade/render.png" alt="" loading="eager" decoding="async">
-        <video src="assets/videos/hero-1.mp4" muted playsinline preload="auto"></video>
+        <img src="assets/img/hero-poster.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" class="is-active">
+        <video src="assets/videos/hero-1.mp4" poster="assets/img/hero-poster.jpg" muted playsinline autoplay preload="auto"></video>
         <video src="assets/videos/hero-2.mp4" muted playsinline preload="auto"></video>
         <video src="assets/videos/hero-3.mp4" muted playsinline preload="auto"></video>
       </div>
