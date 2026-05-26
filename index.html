@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="home.title">Arthaud Développement · Réhabilitation patrimoniale · Antibes & Nice</title>
+  <meta name="description" content="Promotion immobilière sur la Côte d'Azur. Réhabilitation d'immeubles de caractère entre Antibes, Vieil Antibes et Nice. Découvrez nos opérations, biens disponibles et réalisations.">
+  <meta name="theme-color" content="#FAFAF7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" class="header header--transparent">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Arthaud Développement — accueil">
+        Arthaud Développement
+        <small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" data-i18n-aria="menu.open" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Navigation principale">
+        <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+        <a href="operations.html" data-i18n="nav.operations">Opérations</a>
+        <a href="stock.html" data-i18n="nav.stock">Stock</a>
+        <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Présentation Arthaud Développement">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/sade/render.png" alt="" class="is-active">
+        <video src="assets/videos/hero-1.mp4" muted playsinline preload="auto"></video>
+        <video src="assets/videos/hero-2.mp4" muted playsinline preload="auto"></video>
+        <video src="assets/videos/hero-3.mp4" muted playsinline preload="auto"></video>
+      </div>
+
+      <div class="container hero__inner">
+        <span class="eyebrow" data-i18n="home.hero.eyebrow">Réhabilitation patrimoniale · Côte d'Azur</span>
+        <h1 data-i18n="home.hero.h1">Faire revivre la pierre méditerranéenne.</h1>
+        <p data-i18n="home.hero.p">Nous restaurons des immeubles d'exception au cœur du Vieil Antibes et de la Côte d'Azur, pour en faire des lieux de vie singuliers — pensés avec soin, vendus sur mesure.</p>
+        <div class="hero__cta">
+          <a href="operations.html" class="btn btn--light" data-i18n="home.hero.cta1">Découvrir nos opérations</a>
+          <a href="stock.html" class="btn btn--ghost" data-i18n="home.hero.cta2">Voir le stock disponible</a>
+        </div>
+      </div>
+
+      <span class="hero__scroll" data-i18n="home.hero.scroll">Défiler</span>
+    </section>
+
+    <section class="tiles">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="home.tiles.eyebrow">Explorer</span>
+          <h2 data-i18n="home.tiles.h2">Trois manières d'entrer.</h2>
+        </div>
+
+        <div class="tiles__grid">
+
+          <a href="operations.html" class="tile reveal" aria-label="Découvrir les opérations en cours">
+            <img src="assets/img/sade/render.png" alt="" class="tile__img" loading="lazy">
+            <div class="tile__body">
+              <span class="eyebrow" data-i18n="home.tile1.eb">Opérations</span>
+              <h3 data-i18n="home.tile1.h3">Les projets en cours</h3>
+              <span class="tile__arrow">
+                <span data-i18n="home.tile1.cta">Découvrir</span>
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M1 5h16m0 0L13 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="stock.html" class="tile reveal" aria-label="Voir les biens disponibles à la vente">
+            <img src="assets/img/sade/facade.jpg" alt="" class="tile__img" loading="lazy">
+            <div class="tile__body">
+              <span class="eyebrow" data-i18n="home.tile2.eb">Stock</span>
+              <h3 data-i18n="home.tile2.h3">Les biens disponibles</h3>
+              <span class="tile__arrow">
+                <span data-i18n="home.tile2.cta">Parcourir</span>
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M1 5h16m0 0L13 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="realisations.html" class="tile reveal" aria-label="Voir les réalisations livrées">
+            <img src="assets/img/realisations/republique/photo-1.png" alt="" class="tile__img" loading="lazy">
+            <div class="tile__body">
+              <span class="eyebrow" data-i18n="home.tile3.eb">Réalisations</span>
+              <h3 data-i18n="home.tile3.h3">Les projets livrés</h3>
+              <span class="tile__arrow">
+                <span data-i18n="home.tile3.cta">Visiter</span>
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M1 5h16m0 0L13 1m4 4l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about-band" aria-label="À propos d'Arthaud Développement">
+      <div class="container">
+        <div class="about-band__grid">
+
+          <div class="about-band__img reveal">
+            <img src="assets/img/sade/facade.jpg" alt="Façade restaurée du Vieil Antibes — opération Arthaud Développement" loading="lazy">
+          </div>
+
+          <div class="about-band__text reveal">
+            <span class="eyebrow" data-i18n="home.about.eb">Notre démarche</span>
+            <h2 data-i18n="home.about.h2">Une promotion à taille humaine, au plus près de la pierre.</h2>
+            <p data-i18n="home.about.p1">Depuis le Vieil Antibes, nous identifions des immeubles oubliés du tissu ancien — façades du XVIIIᵉ, hôtels particuliers, échoppes du bord de mer — et les ramenons à la vie avec un soin presque artisanal.</p>
+            <p data-i18n="home.about.p2">Chaque projet est conduit lot par lot, en lien direct avec les acquéreurs : choix des matériaux, agencement des volumes, finitions sur mesure. C'est une autre manière de faire de la promotion, plus lente, plus juste, plus durable.</p>
+            <p class="signature" data-i18n="home.about.sig">— Du Vieil Antibes à la Côte d'Azur.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band">
+      <div class="container container--narrow">
+        <span class="eyebrow reveal" data-i18n="home.cb.eb">Un projet d'acquisition</span>
+        <h2 class="reveal" data-i18n="home.cb.h2">Parlons de votre recherche.</h2>
+        <p class="reveal" data-i18n="home.cb.p">Vous cherchez un pied-à-terre dans le Vieil Antibes, un investissement patrimonial ou un local d'exception sur la Côte d'Azur ? Nous prenons le temps d'écouter avant de vous proposer le bien juste.</p>
+        <a href="contact.html" class="btn btn--light reveal" data-i18n="home.cb.cta">Nous écrire</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__intro">
+          <span class="logo">Arthaud Développement<small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small></span>
+          <p data-i18n="footer.intro">Réhabilitation patrimoniale d'immeubles d'exception entre le Vieil Antibes et la Côte d'Azur.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.navigate">Naviguer</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="operations.html" data-i18n="nav.operations">Opérations</a></li>
+            <li><a href="stock.html" data-i18n="nav.stock">Stock</a></li>
+            <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@arthaud-developpement.fr">contact@arthaud-developpement.fr</a></li>
+            <li><a href="contact.html" data-i18n="footer.tailored">Demande sur-mesure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.territories">Territoires</h4>
+          <ul>
+            <li data-i18n="footer.t1">Antibes — Vieil Antibes</li>
+            <li data-i18n="footer.t2">Nice — Côte d'Azur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2026 Arthaud Développement. Tous droits réservés.</span>
+        <span data-i18n="footer.legal">Mentions légales · Politique de confidentialité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

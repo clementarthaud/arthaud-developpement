@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="stock.title">Biens disponibles · Stock · Arthaud Développement</title>
+  <meta name="description" content="Découvrez nos biens disponibles à la vente : appartements rénovés et lots neufs des opérations Les Jardins de Sade, 9 rue du Bateau et 25 rue Sade (Vue Place Nationale).">
+  <meta name="theme-color" content="#FAFAF7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" class="header header--solid">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Arthaud Développement — accueil">
+        Arthaud Développement
+        <small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" data-i18n-aria="menu.open" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="operations.html" data-i18n="nav.operations">Opérations</a>
+        <a href="stock.html" class="active" data-i18n="nav.stock">Stock</a>
+        <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal" data-i18n="stock.hero.eb">Biens disponibles</span>
+        <h1 class="reveal" data-i18n="stock.hero.h1">Le stock du moment.</h1>
+        <p class="reveal" data-i18n="stock.hero.p">Tous les lots en vente, du studio aux quatre-pièces, présentés avec leurs plans, surfaces et prix. Filtrez par opération, typologie, budget ou surface — et demandez l'information sur celui qui retient votre attention.</p>
+      </div>
+    </section>
+
+    <!-- Sticky filter bar -->
+    <div class="stock-filters" role="region" aria-label="Filtres des biens">
+      <div class="container stock-filters__inner">
+        <span class="stock-filters__label" data-i18n="stock.filters.label">Affiner</span>
+
+        <div class="filter-select">
+          <label for="f-operation" class="sr-only">Opération</label>
+          <select id="f-operation">
+            <option value="" data-i18n="stock.f.op.all">Toutes les opérations</option>
+            <option value="jardins-sade">Les Jardins de Sade</option>
+            <option value="9-bateau">9 rue du Bateau</option>
+            <option value="25-sade">25 rue Sade</option>
+          </select>
+        </div>
+
+        <div class="filter-select">
+          <label for="f-type" class="sr-only">Typologie</label>
+          <select id="f-type">
+            <option value="" data-i18n="stock.f.type.all">Toutes typologies</option>
+            <option value="T2">T2</option>
+            <option value="T3">T3</option>
+            <option value="T4">T4</option>
+          </select>
+        </div>
+
+        <div class="filter-select">
+          <label for="f-budget" class="sr-only">Budget</label>
+          <select id="f-budget">
+            <option value="" data-i18n="stock.f.budget.all">Tous budgets</option>
+            <option value="inf-400k" data-i18n="stock.f.budget.1">Moins de 400 000 €</option>
+            <option value="400k-700k" data-i18n="stock.f.budget.2">400 000 à 700 000 €</option>
+            <option value="700k-1m" data-i18n="stock.f.budget.3">700 000 € à 1 M€</option>
+            <option value="sup-1m" data-i18n="stock.f.budget.4">Plus d'1 M€</option>
+          </select>
+        </div>
+
+        <div class="filter-select">
+          <label for="f-surface" class="sr-only">Surface</label>
+          <select id="f-surface">
+            <option value="" data-i18n="stock.f.surf.all">Toutes surfaces</option>
+            <option value="inf-40" data-i18n="stock.f.surf.1">Moins de 40 m²</option>
+            <option value="40-70" data-i18n="stock.f.surf.2">40 à 70 m²</option>
+            <option value="70-100" data-i18n="stock.f.surf.3">70 à 100 m²</option>
+            <option value="sup-100" data-i18n="stock.f.surf.4">Plus de 100 m²</option>
+          </select>
+        </div>
+
+        <button id="btn-reset" class="filter-reset" type="button" data-i18n="stock.f.reset">Réinitialiser</button>
+      </div>
+    </div>
+
+    <section style="padding-top: var(--space-7);">
+      <div class="container">
+
+        <p id="stock-count" class="stock-count" aria-live="polite" data-i18n="stock.count">11 biens disponibles</p>
+
+        <div class="stock-grid" id="stock-grid">
+
+          <!-- ============== 25 RUE SADE — VUE PLACE NATIONALE (le plus achevé) ============== -->
+          <article class="lot-card reveal"
+            data-operation="25-sade" data-type="T2"
+            data-budget="400k-700k" data-surface="40-70" data-ref="SADE25-NORD">
+            <div class="lot-card__media lot-card__media--photo">
+              <span class="lot-card__floor">Vue Place Nationale</span>
+              <span class="lot-card__op">25 rue Sade</span>
+              <img src="assets/img/sade-25-nord/photo-1.png" alt="Appartement Vue Place Nationale — 25 rue Sade, Vieil Antibes" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Vue Place Nationale · Meublé</span>
+              <h3 class="lot-card__title">Appartement Vue Place Nationale</h3>
+              <ul class="lot-card__specs">
+                <li>51 m²</li>
+                <li>Vieil Antibes · Place Nationale</li>
+              </ul>
+              <p class="lot-card__price">560 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.25sade.intro">Au cœur de la Place Nationale, ce T2 de 51 m² s'inscrit dans la réhabilitation soignée d'un immeuble de caractère du Vieil Antibes. Combles aménagés, vue directe sur la place, livré entièrement rénové, meublé et clé en main.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 51 m²</li>
+                <li><strong>Typologie</strong> : T2 meublé</li>
+                <li><strong>Étage</strong> : dernier — combles aménagés</li>
+                <li><strong>Exposition / vue</strong> : Place Nationale</li>
+                <li><strong>État</strong> : entièrement rénové, prêt à habiter</li>
+                <li><strong>Prix</strong> : 560 000 € FAI</li>
+                <li><strong>Honoraires</strong> : à charge vendeur — proposé par l'Agence des Remparts</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade-25-nord/photo-1.png" alt="25 rue Sade — Vue Place Nationale, photo 1">
+                <img src="assets/img/sade-25-nord/photo-2.png" alt="25 rue Sade — Vue Place Nationale, photo 2">
+                <img src="assets/img/sade-25-nord/photo-3.png" alt="25 rue Sade — Vue Place Nationale, photo 3">
+              </div>
+            </template>
+          </article>
+
+
+          <!-- ============== 9 RUE DU BATEAU — REMPARTS ============== -->
+          <article class="lot-card reveal"
+            data-operation="9-bateau" data-type="T3"
+            data-budget="sup-1m" data-surface="40-70" data-ref="BATEAU-PH">
+            <div class="lot-card__media lot-card__media--photo">
+              <span class="lot-card__floor">Dernier étage</span>
+              <span class="lot-card__op">9 rue du Bateau</span>
+              <img src="assets/img/bateau/photo-1.jpg" alt="Vue mer depuis l'appartement du 9 rue du Bateau" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T3 · Vue mer · Meublé</span>
+              <h3 class="lot-card__title">Pied-à-terre face à la Méditerranée</h3>
+              <ul class="lot-card__specs">
+                <li>66 m² + mezzanine</li>
+                <li>Sur les remparts</li>
+              </ul>
+              <p class="lot-card__price">1 299 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.bateau.intro">Sur les remparts d'Antibes, en première ligne face à la Méditerranée, un appartement rare suspendu entre ciel et mer. En cours de rénovation avec des prestations haut de gamme, ce 3/4 pièces de 66 m² loi Carrez — complété par une mezzanine — offre une atmosphère lumineuse et une vue mer imprenable depuis le séjour. Vendu entièrement meublé et équipé.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 66 m² loi Carrez + mezzanine</li>
+                <li><strong>Typologie</strong> : 3/4 pièces, dernier étage</li>
+                <li><strong>Exposition / vue</strong> : panoramique mer — séjour face à la Méditerranée</li>
+                <li><strong>État</strong> : rénovation haut de gamme en cours, livraison juillet 2026</li>
+                <li><strong>Meublé & équipé</strong> : oui, vendu clé en main</li>
+                <li><strong>Prix</strong> : 1 299 000 € FAI</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/bateau/photo-1.jpg" alt="9 rue du Bateau — photo 1">
+                <img src="assets/img/bateau/photo-2.jpg" alt="9 rue du Bateau — photo 2">
+                <img src="assets/img/bateau/photo-3.jpg" alt="9 rue du Bateau — photo 3">
+                <img src="assets/img/bateau/photo-4.jpg" alt="9 rue du Bateau — photo 4">
+                <img src="assets/img/bateau/photo-5.jpg" alt="9 rue du Bateau — photo 5">
+              </div>
+            </template>
+          </article>
+
+
+          <!-- ============== JARDINS DE SADE — R+1 ============== -->
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T3"
+            data-budget="700k-1m" data-surface="70-100" data-ref="JDS-R1-T3">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+1</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r1-t3.png" alt="Plan du T3 traversant — R+1 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T3 · Sud / Traversant</span>
+              <h3 class="lot-card__title">T3 traversant — 1ᵉʳ étage</h3>
+              <ul class="lot-card__specs">
+                <li>74,37 m²</li>
+                <li>Antibes — Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">850 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r1t3.intro">Au sein des Jardins de Sade, T3 traversant lumineux au 1ᵉʳ étage. Volumes anciens préservés, prestations contemporaines, finitions sur mesure définies avec l'acquéreur.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 74,37 m²</li>
+                <li><strong>Typologie</strong> : T3 traversant</li>
+                <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
+                <li><strong>Exposition</strong> : Sud, traversant</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 850 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r1-t3.png" alt="Plan du T3 traversant — R+1">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T2"
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R1-T2N">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+1</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r1-t2-nord.png" alt="Plan du T2 commercial Nord — R+1 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Nord</span>
+              <h3 class="lot-card__title">T2 — 1ᵉʳ étage</h3>
+              <ul class="lot-card__specs">
+                <li>29,4 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">340 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r1t2n.intro">T2 compact côté Nord au 1ᵉʳ étage des Jardins de Sade — idéal pied-à-terre ou investissement locatif au cœur du Vieil Antibes.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 29,4 m²</li>
+                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
+                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 340 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r1-t2-nord.png" alt="Plan du T2 Nord — R+1">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T2"
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R1-T2S">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+1</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r1-t2-sud.png" alt="Plan du T2 commercial Sud — R+1 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Sud</span>
+              <h3 class="lot-card__title">T2 — 1ᵉʳ étage</h3>
+              <ul class="lot-card__specs">
+                <li>28,1 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">350 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r1t2s.intro">T2 compact côté Sud au 1ᵉʳ étage des Jardins de Sade — exposition lumineuse, idéal pied-à-terre ou investissement locatif au cœur du Vieil Antibes.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 28,1 m²</li>
+                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
+                <li><strong>Exposition</strong> : Sud</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 350 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r1-t2-sud.png" alt="Plan du T2 Sud — R+1">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+
+          <!-- ============== JARDINS DE SADE — R+2 ============== -->
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T4"
+            data-budget="sup-1m" data-surface="sup-100" data-ref="JDS-R2-T4">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+2</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r2-t4.png" alt="Plan du T4 — R+2 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T4 · Sud — Traversant</span>
+              <h3 class="lot-card__title">T4 — 2ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>102 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">1 250 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r2t4.intro">T4 traversant de 102 m² au 2ᵉ étage des Jardins de Sade. Belle hauteur sous plafond, double exposition, prestations sur mesure haut de gamme.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 102 m²</li>
+                <li><strong>Typologie</strong> : T4 traversant</li>
+                <li><strong>Étage</strong> : 2ᵉ — R+2</li>
+                <li><strong>Exposition</strong> : Sud, traversant</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 1 250 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r2-t4.png" alt="Plan du T4 — R+2">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T2"
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R2-T2N">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+2</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r2-t2-nord.png" alt="Plan du T2 commercial Nord — R+2 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Nord</span>
+              <h3 class="lot-card__title">T2 — 2ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>28,6 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">340 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r2t2n.intro">T2 compact côté Nord au 2ᵉ étage des Jardins de Sade — bonne luminosité, idéal pied-à-terre ou investissement locatif.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 28,6 m²</li>
+                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Étage</strong> : 2ᵉ — R+2</li>
+                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 340 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r2-t2-nord.png" alt="Plan du T2 Nord — R+2">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T2"
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R2-T2S">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+2</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r2-t2-sud.png" alt="Plan du T2 commercial Sud — R+2 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Sud</span>
+              <h3 class="lot-card__title">T2 — 2ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>28,4 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">365 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r2t2s.intro">T2 compact côté Sud au 2ᵉ étage des Jardins de Sade — exposition lumineuse, parfait pour un pied-à-terre ou un investissement locatif.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 28,4 m²</li>
+                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Étage</strong> : 2ᵉ — R+2</li>
+                <li><strong>Exposition</strong> : Sud</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 365 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r2-t2-sud.png" alt="Plan du T2 Sud — R+2">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+
+          <!-- ============== JARDINS DE SADE — R+3 ============== -->
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T3"
+            data-budget="700k-1m" data-surface="70-100" data-ref="JDS-R3-T3T">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+3</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r3-t3-traversant.png" alt="Plan du T3 traversant — R+3 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T3 · Traversant</span>
+              <h3 class="lot-card__title">T3 traversant — 3ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>81,93 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">995 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r3t3t.intro">T3 traversant au 3ᵉ étage des Jardins de Sade — vues dégagées sur les toits du Vieil Antibes, double exposition, prestations sur mesure.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 81,93 m²</li>
+                <li><strong>Typologie</strong> : T3 traversant</li>
+                <li><strong>Étage</strong> : 3ᵉ — R+3</li>
+                <li><strong>Exposition</strong> : double, traversant</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 995 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r3-t3-traversant.png" alt="Plan du T3 traversant — R+3">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T3"
+            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-R3-T3N">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+3</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r3-t3-nord.png" alt="Plan du T3 Nord — R+3 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T3 · Nord</span>
+              <h3 class="lot-card__title">T3 — 3ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>54,26 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">640 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r3t3n.intro">T3 côté Nord au 3ᵉ étage des Jardins de Sade — vues sur les toits, atmosphère paisible, conception sur mesure avec l'acquéreur.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 54,26 m²</li>
+                <li><strong>Typologie</strong> : T3</li>
+                <li><strong>Étage</strong> : 3ᵉ — R+3</li>
+                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 640 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r3-t3-nord.png" alt="Plan du T3 Nord — R+3">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="T2"
+            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-R3-DUPLEX">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">R+3 · Duplex</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/lots/lot-r3-duplex.png" alt="Plan du T2 duplex mezzanine — R+3 · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type">T2 · Duplex Mezzanine</span>
+              <h3 class="lot-card__title">T2 duplex — 3ᵉ étage</h3>
+              <ul class="lot-card__specs">
+                <li>45,25 m²</li>
+                <li>Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">540 000 € <small>FAI</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.r3dpx.intro">T2 duplex avec mezzanine au 3ᵉ étage des Jardins de Sade — atmosphère cosy sous combles, conception sur mesure avec l'acquéreur.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 45,25 m²</li>
+                <li><strong>Typologie</strong> : T2 duplex avec mezzanine</li>
+                <li><strong>Étage</strong> : 3ᵉ — R+3</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
+                <li><strong>Prix</strong> : 540 000 € FAI</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/lots/lot-r3-duplex.png" alt="Plan du T2 duplex — niveau bas, 3ᵉ étage">
+                <img src="assets/img/sade/lots/lot-r3-duplex-mezz.png" alt="Plan du T2 duplex — mezzanine">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+        </div>
+
+        <div id="no-results" class="no-results" hidden>
+          <p data-i18n="stock.noresults">Aucun bien ne correspond à vos critères pour le moment.</p>
+          <button id="btn-reset-alt" class="btn btn--outline btn--sm" type="button" data-i18n="stock.noresults.cta">Réinitialiser les filtres</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-band">
+      <div class="container container--narrow">
+        <span class="eyebrow reveal" data-i18n="stock.cb.eb">Une recherche spécifique</span>
+        <h2 class="reveal" data-i18n="stock.cb.h2">Vous ne trouvez pas le bien recherché ?</h2>
+        <p class="reveal" data-i18n="stock.cb.p">Nous recevons régulièrement de nouveaux mandats et identifions des biens en off-market sur le Vieil Antibes et la Riviera. Faites-nous part de votre cahier des charges.</p>
+        <a href="contact.html" class="btn btn--light reveal" data-i18n="stock.cb.cta">Définir ma recherche</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__intro">
+          <span class="logo">Arthaud Développement<small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small></span>
+          <p data-i18n="footer.intro">Réhabilitation patrimoniale d'immeubles d'exception entre le Vieil Antibes et la Côte d'Azur.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.navigate">Naviguer</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="operations.html" data-i18n="nav.operations">Opérations</a></li>
+            <li><a href="stock.html" data-i18n="nav.stock">Stock</a></li>
+            <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@arthaud-developpement.fr">contact@arthaud-developpement.fr</a></li>
+            <li><a href="contact.html" data-i18n="footer.tailored">Demande sur-mesure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.territories">Territoires</h4>
+          <ul>
+            <li data-i18n="footer.t1">Antibes — Vieil Antibes</li>
+            <li data-i18n="footer.t2">Nice — Côte d'Azur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2026 Arthaud Développement. Tous droits réservés.</span>
+        <span data-i18n="footer.legal">Mentions légales · Politique de confidentialité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

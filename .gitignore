@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node (au cas où)
+node_modules/
+
+# Vercel
+.vercel
+
+# Dossier source brut (photos/vidéos originales non utilisées par le site)
+Site/

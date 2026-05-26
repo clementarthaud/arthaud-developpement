@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="ops.title">Opérations en cours · Arthaud Développement</title>
+  <meta name="description" content="Découvrez nos opérations de réhabilitation en cours : Les Jardins de Sade et 9 rue du Bateau à Antibes.">
+  <meta name="theme-color" content="#FAFAF7">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="site-header" class="header header--solid">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Arthaud Développement — accueil">
+        Arthaud Développement
+        <small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small>
+      </a>
+      <button id="menu-toggle" class="menu-toggle" data-i18n-aria="menu.open" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="nav" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="operations.html" class="active" data-i18n="nav.operations">Opérations</a>
+        <a href="stock.html" data-i18n="nav.stock">Stock</a>
+        <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal" data-i18n="ops.hero.eb">Opérations en cours</span>
+        <h1 class="reveal" data-i18n="ops.hero.h1">Deux immeubles, deux récits méditerranéens.</h1>
+        <p class="reveal" data-i18n="ops.hero.p">De la rénovation totale d'un immeuble historique du Vieil Antibes à un appartement suspendu face à la mer, chaque opération est conduite avec la même exigence : faire dialoguer la pierre ancienne et l'art de vivre contemporain.</p>
+      </div>
+    </section>
+
+    <section class="op-list">
+      <div class="container">
+
+        <!-- ====================== OP 1 — JARDINS DE SADE ====================== -->
+        <div class="op-block" id="jardins-de-sade">
+          <article class="op-row reveal">
+            <div class="op-row__media">
+              <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade — façade restaurée 21/23 rue Sade, Vieil Antibes" loading="lazy">
+            </div>
+            <div class="op-row__body">
+              <span class="eyebrow" data-i18n="op.jds.eb">Opération phare · 9 lots</span>
+              <h2 data-i18n="op.jds.h2">Les Jardins de Sade</h2>
+              <p class="op-row__loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+                <span data-i18n="op.jds.loc">21/23 rue Sade · Vieil Antibes</span>
+              </p>
+              <p data-i18n="op.jds.p">Sur deux immeubles mitoyens du cœur historique, Les Jardins de Sade ressuscitent un ensemble du XVIIIᵉ siècle : façades en pierre, voûtes anciennes, terrasses arborées en cœur d'îlot. Neuf appartements — du T2 au T4 — composent une partition rare, mêlant la patine de l'ancien et des prestations contemporaines pensées dans la longue durée.</p>
+
+              <div class="op-stats">
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.program">Programme</div>
+                  <div class="op-stat__value" data-i18n="op.jds.lots">9 lots</div>
+                </div>
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.typology">Typologie</div>
+                  <div class="op-stat__value" data-i18n="op.jds.types">T2 → T4</div>
+                </div>
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.surfaces">Surfaces</div>
+                  <div class="op-stat__value" data-i18n="op.jds.surfaces">28 → 102 m²</div>
+                </div>
+              </div>
+
+              <div class="op-badges">
+                <span class="badge" data-i18n="op.jds.b1">Bâtiment historique</span>
+                <span class="badge badge--sky" data-i18n="op.jds.b2">Éligible déficit foncier</span>
+                <span class="badge" data-i18n="op.jds.b3">Sur-mesure acquéreurs</span>
+              </div>
+
+              <div class="op-row__ctas">
+                <a href="stock.html#stock-grid" class="btn btn--primary listing-cta" data-i18n="op.jds.cta1">Voir les 9 lots disponibles</a>
+                <a href="contact.html" class="btn btn--outline listing-cta" data-i18n="op.jds.cta2">Demander la grille</a>
+              </div>
+            </div>
+          </article>
+
+          <p class="gallery-label reveal" data-i18n="op.jds.gallery">Galerie · 21/23 rue Sade</p>
+          <div class="gallery-strip reveal" role="region" aria-label="Galerie des Jardins de Sade">
+            <figure class="gallery-strip__item">
+              <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade, Vieil Antibes" loading="lazy">
+            </figure>
+            <figure class="gallery-strip__item">
+              <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade — vue restaurée" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+
+        <!-- ====================== OP 2 — 9 RUE DU BATEAU ====================== -->
+        <div class="op-block" id="9-rue-du-bateau">
+          <article class="op-row reveal">
+            <div class="op-row__media">
+              <img src="assets/img/bateau/photo-1.jpg" alt="Vue mer depuis l'appartement du 9 rue du Bateau — Vieil Antibes" loading="lazy">
+            </div>
+            <div class="op-row__body">
+              <span class="eyebrow" data-i18n="op.bateau.eb">En cours de travaux · Lot unique</span>
+              <h2 data-i18n="op.bateau.h2">9 rue du Bateau</h2>
+              <p class="op-row__loc">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+                <span data-i18n="op.bateau.loc">9 rue du Bateau · Vieil Antibes — sur les remparts</span>
+              </p>
+              <p data-i18n="op.bateau.p">Sur les remparts d'Antibes, au dernier étage et en première ligne face à la Méditerranée, un appartement rare suspendu entre ciel et mer. En cours de rénovation avec des prestations haut de gamme, ce 3/4 pièces de 66 m² loi Carrez — complété par une mezzanine — offre une atmosphère lumineuse et une vue mer imprenable depuis le séjour. Vendu entièrement meublé et équipé : un pied-à-terre d'exception au cœur du Vieil Antibes.</p>
+
+              <div class="op-stats">
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.surface">Surface</div>
+                  <div class="op-stat__value" data-i18n="op.bateau.surf">66 m² + mezz.</div>
+                </div>
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.rooms">Pièces</div>
+                  <div class="op-stat__value" data-i18n="op.bateau.rooms">3/4</div>
+                </div>
+                <div class="op-stat">
+                  <div class="op-stat__label" data-i18n="op.stat.delivery">Livraison</div>
+                  <div class="op-stat__value" data-i18n="op.bateau.delivery">Juillet 2026</div>
+                </div>
+              </div>
+
+              <div class="op-badges">
+                <span class="badge badge--ink" data-i18n="op.bateau.b1">Vue mer panoramique</span>
+                <span class="badge" data-i18n="op.bateau.b2">Meublé & équipé</span>
+                <span class="badge badge--sky" data-i18n="op.bateau.b3">1 299 000 € FAI</span>
+              </div>
+
+              <div class="op-row__ctas" data-ref="9-Bateau-PH">
+                <a href="contact.html" class="btn btn--primary listing-cta" data-i18n="op.bateau.cta1">Recevoir le dossier complet</a>
+                <a href="contact.html" class="btn btn--outline listing-cta" data-i18n="op.bateau.cta2">Visiter sur rendez-vous</a>
+              </div>
+
+              <p style="margin-top: var(--space-4); font-size: 13px; color: var(--c-stone);" data-i18n="op.bateau.agency">Bien proposé par l'agence des Remparts.</p>
+            </div>
+          </article>
+
+          <p class="gallery-label reveal" data-i18n="op.bateau.gallery">Galerie · 9 rue du Bateau</p>
+          <div class="gallery-strip reveal" role="region" aria-label="Galerie 9 rue du Bateau">
+            <figure class="gallery-strip__item">
+              <img src="assets/img/bateau/photo-1.jpg" alt="9 rue du Bateau — photo 1" loading="lazy">
+            </figure>
+            <figure class="gallery-strip__item">
+              <img src="assets/img/bateau/photo-2.jpg" alt="9 rue du Bateau — photo 2" loading="lazy">
+            </figure>
+            <figure class="gallery-strip__item">
+              <img src="assets/img/bateau/photo-3.jpg" alt="9 rue du Bateau — photo 3" loading="lazy">
+            </figure>
+            <figure class="gallery-strip__item">
+              <img src="assets/img/bateau/photo-4.jpg" alt="9 rue du Bateau — photo 4" loading="lazy">
+            </figure>
+            <figure class="gallery-strip__item">
+              <img src="assets/img/bateau/photo-5.jpg" alt="9 rue du Bateau — photo 5" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="contact-band">
+      <div class="container container--narrow">
+        <span class="eyebrow reveal" data-i18n="ops.cb.eb">Étudier un investissement</span>
+        <h2 class="reveal" data-i18n="ops.cb.h2">Vous souhaitez une grille de prix détaillée ?</h2>
+        <p class="reveal" data-i18n="ops.cb.p">Plans, notice descriptive, calendrier de travaux, simulation fiscale : nous adressons un dossier complet à chaque demande qualifiée.</p>
+        <a href="contact.html" class="btn btn--light reveal" data-i18n="ops.cb.cta">Demander un dossier</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__intro">
+          <span class="logo">Arthaud Développement<small data-i18n="logo.tagline">Promotion immobilière · Côte d'Azur</small></span>
+          <p data-i18n="footer.intro">Réhabilitation patrimoniale d'immeubles d'exception entre le Vieil Antibes et la Côte d'Azur.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.navigate">Naviguer</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="operations.html" data-i18n="nav.operations">Opérations</a></li>
+            <li><a href="stock.html" data-i18n="nav.stock">Stock</a></li>
+            <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul>
+            <li><a href="mailto:contact@arthaud-developpement.fr">contact@arthaud-developpement.fr</a></li>
+            <li><a href="contact.html" data-i18n="footer.tailored">Demande sur-mesure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.territories">Territoires</h4>
+          <ul>
+            <li data-i18n="footer.t1">Antibes — Vieil Antibes</li>
+            <li data-i18n="footer.t2">Nice — Côte d'Azur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer.copy">© 2026 Arthaud Développement. Tous droits réservés.</span>
+        <span data-i18n="footer.legal">Mentions légales · Politique de confidentialité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
