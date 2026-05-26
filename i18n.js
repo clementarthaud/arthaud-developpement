@@ -70,7 +70,7 @@
                              en: 'Each project involves in-depth work on volumes, light and the optimisation of spaces, to create places that are more coherent, elegant and lasting, while respecting the original architectural identity.' },
     'home.about.p3':       { fr: 'Nous accordons une attention particulière au choix des matériaux, aux détails patrimoniaux et aux finitions, afin de préserver le charme et l\u2019authenticité des lieux. Chaque acquéreur bénéficie enfin d\u2019un accompagnement personnalisé, permettant d\u2019adapter les espaces et les prestations pour concevoir un lieu de vie véritablement sur mesure.',
                              en: 'We pay particular attention to the choice of materials, heritage details and finishes, in order to preserve the charm and authenticity of each place. Every buyer also benefits from personalised guidance, allowing spaces and finishes to be tailored to design a truly bespoke home.' },
-    'home.about.sig':      { fr: '— Du Vieil Antibes à la Côte d\u2019Azur.', en: '— From Old Antibes to the French Riviera.' },
+    'home.about.sig':      { fr: '— Restaurer, restructurer, révéler.', en: '— Restore, restructure, reveal.' },
 
     'home.cb.eb':          { fr: 'Un projet d\u2019acquisition', en: 'A purchase project' },
     'home.cb.h2':          { fr: 'Parlons de votre recherche.', en: 'Let\u2019s discuss your search.' },
