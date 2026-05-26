@@ -303,7 +303,7 @@ section { padding: var(--space-9) 0; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--c-bg);
+  background: var(--c-ink);
 }
 .hero__media img,
 .hero__media video {
