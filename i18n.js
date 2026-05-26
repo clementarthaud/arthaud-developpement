@@ -15,8 +15,8 @@
     'nav.stock':           { fr: 'Stock',         en: 'Available' },
     'nav.realisations':    { fr: 'Réalisations',  en: 'Past projects' },
     'nav.contact':         { fr: 'Contact',       en: 'Contact' },
-    'logo.tagline':        { fr: 'Promotion immobilière par Marchand de biens',
-                             en: 'Real estate development by property dealer' },
+    'logo.tagline':        { fr: 'Marchand de biens',
+                             en: 'Property dealer' },
     'menu.open':           { fr: 'Ouvrir le menu', en: 'Open menu' },
 
     'footer.intro':        { fr: 'Réhabilitation patrimoniale d\u2019immeubles d\u2019exception entre le Vieil Antibes et la Côte d\u2019Azur.',
