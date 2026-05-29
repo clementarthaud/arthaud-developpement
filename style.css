@@ -1151,6 +1151,23 @@ body.lightbox-open { overflow: hidden; }
   margin-top: auto;
   margin-bottom: var(--space-4);
 }
+.lot-card__status {
+  display: inline-block;
+  margin: calc(var(--space-4) * -1) 0 var(--space-4);
+  padding: 4px 10px;
+  font-family: var(--ff-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+.lot-card__status--reserved {
+  color: #B81E1E;
+  background: rgba(184, 30, 30, .08);
+  border: 1px solid rgba(184, 30, 30, .25);
+}
 .lot-card__price small {
   font-family: var(--ff-label);
   font-size: 11px;

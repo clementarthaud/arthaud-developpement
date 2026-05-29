@@ -116,6 +116,7 @@
     'stock.f.reset':       { fr: 'Réinitialiser', en: 'Reset' },
     'stock.count':         { fr: '11 biens disponibles', en: '11 available properties' },
     'stock.lot.cta':       { fr: 'Demander une information', en: 'Request information' },
+    'stock.lot.reserved':  { fr: 'Réservé', en: 'Reserved' },
     'stock.noresults':     { fr: 'Aucun bien ne correspond à vos critères pour le moment.',
                              en: 'No property matches your criteria at the moment.' },
     'stock.noresults.cta': { fr: 'Réinitialiser les filtres', en: 'Reset filters' },
