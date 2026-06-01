@@ -957,6 +957,27 @@ body.lightbox-open { overflow: hidden; }
 .badge--offer { background: rgba(184,30,30,.1); color: #B81E1E; border-color: rgba(184,30,30,.3); font-weight: 600; }
 
 .op-row__ctas { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.op-offer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  font-family: var(--ff-label);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #B81E1E;
+  background: rgba(184,30,30,.08);
+  border: 1px solid rgba(184,30,30,.3);
+  border-radius: 4px;
+}
+.op-offer::before {
+  content: "";
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: #B81E1E;
+}
 
 /* ---------- 10. STOCK PAGE — FILTERS ---------- */
 .stock-filters {
