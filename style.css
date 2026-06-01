@@ -954,6 +954,7 @@ body.lightbox-open { overflow: hidden; }
 }
 .badge--sky  { background: rgba(123,174,200,.16); color: var(--c-sky-deep); border-color: rgba(90,144,174,.3); }
 .badge--ink  { background: var(--c-ink); color: var(--c-bg); border-color: var(--c-ink); }
+.badge--offer { background: rgba(184,30,30,.1); color: #B81E1E; border-color: rgba(184,30,30,.3); font-weight: 600; }
 
 .op-row__ctas { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 

@@ -219,6 +219,7 @@
     'op.bateau.surf':      { fr: '66 m² + mezz.', en: '66 m² + mezz.' },
     'op.bateau.rooms':     { fr: '3/4', en: '3/4' },
     'op.bateau.delivery':  { fr: 'Juillet 2026', en: 'July 2026' },
+    'op.bateau.offer':     { fr: 'Sous offre', en: 'Under offer' },
     'op.bateau.b1':        { fr: 'Vue mer panoramique', en: 'Panoramic sea view' },
     'op.bateau.b2':        { fr: 'Meublé & équipé', en: 'Furnished & equipped' },
     'op.bateau.b3':        { fr: '1 299 000 € FAI', en: '€1,299,000 incl. fees' },
