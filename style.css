@@ -1685,3 +1685,68 @@ body.lot-modal-open { overflow: hidden; }
     margin-right: var(--space-3);
   }
 }
+
+
+/* ===========================================================
+   BANDEAU DE CONSENTEMENT COOKIES (RGPD)
+   =========================================================== */
+.cookie-consent {
+  position: fixed;
+  left: var(--space-5);
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 1000;
+  max-width: 620px;
+  margin-inline: auto;
+  background: var(--c-bg);
+  border: 1px solid var(--c-sand);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--transition), transform var(--transition);
+  pointer-events: none;
+}
+.cookie-consent.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.cookie-consent__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.cookie-consent__text {
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--c-ink);
+}
+.cookie-consent__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .cookie-consent {
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: var(--space-3);
+  }
+  .cookie-consent__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
+  .cookie-consent__actions {
+    justify-content: stretch;
+  }
+  .cookie-consent__actions .btn {
+    flex: 1;
+  }
+}

@@ -3,6 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Consent Mode v2 (RGPD) — doit s'exécuter AVANT le chargement de gtag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    // Persistance : rejoue le consentement accepté lors d'une visite précédente,
+    // avant le chargement de gtag, pour que l'état "granted" soit pris en compte au plus tôt.
+    try {
+      if (localStorage.getItem('arthaud_consent') === 'accepted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    } catch (e) {}
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18211003118"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'AW-18211003118');
+  </script>
+
   <title data-i18n-title="real.title">Réalisations · Arthaud Développement</title>
   <meta name="description" content="Découvrez nos opérations livrées : 36 rue de la République, 14 rue Lacan, 14 rue du Petit Four, 9 rue du Revely, 25 rue Sade (Sud) à Antibes et 10 avenue Félix Faure à Nice.">
   <meta name="theme-color" content="#FAFAF7">
@@ -400,5 +434,6 @@
 
   <script src="i18n.js" defer></script>
   <script src="main.js" defer></script>
+  <script src="consent.js" defer></script>
 </body>
 </html>
