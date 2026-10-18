@@ -38,7 +38,7 @@
   </script>
 
   <title data-i18n-title="stock.title">Biens disponibles · Stock · Arthaud Développement</title>
-  <meta name="description" content="Découvrez nos biens disponibles à la vente : appartements rénovés et lots neufs des opérations Les Jardins de Sade, 9 rue du Bateau et 25 rue Sade (Vue Place Nationale).">
+  <meta name="description" content="Découvrez nos biens disponibles à la vente : appartements rénovés et lots neufs des opérations Les Jardins de Sade et 25 rue Sade (Vue Place Nationale).">
   <meta name="theme-color" content="#FAFAF7">
   <meta name="google-site-verification" content="bWI9-2ILe3xhB3SdEOzaAUgIBRg1nIc6jAWZ0D2eUNs" />
 
@@ -88,7 +88,6 @@
           <select id="f-operation">
             <option value="" data-i18n="stock.f.op.all">Toutes les opérations</option>
             <option value="jardins-sade">Les Jardins de Sade</option>
-            <option value="9-bateau">9 rue du Bateau</option>
             <option value="25-sade">25 rue Sade</option>
           </select>
         </div>
@@ -153,6 +152,7 @@
                 <li>Vieil Antibes · Place Nationale</li>
               </ul>
               <p class="lot-card__price">539 000 € <small>FAI</small></p>
+              <p class="lot-card__status lot-card__status--reserved" data-i18n="stock.lot.compromis">Sous compromis</p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
@@ -178,35 +178,38 @@
           <!-- ============== JARDINS DE SADE — R+1 ============== -->
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T3"
-            data-budget="700k-1m" data-surface="70-100" data-ref="JDS-R1-T3">
+            data-budget="700k-1m" data-surface="70-100" data-ref="JDS-CYPRES">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+1</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r1-t3.png" alt="Plan du T3 traversant — R+1 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-cypres.png" alt="Plan de l'appartement Cyprès — R+1 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T3 · Sud / Traversant</span>
-              <h3 class="lot-card__title">T3 traversant — 1ᵉʳ étage</h3>
+              <span class="lot-card__type">T3 · 2 chambres · 2 salles d'eau</span>
+              <h3 class="lot-card__title">Appartement Cyprès — 1ᵉʳ étage</h3>
               <ul class="lot-card__specs">
-                <li>74,37 m²</li>
+                <li>74,90 m²</li>
+                <li>Sud · vue sur jardin</li>
                 <li>Antibes — Vieil Antibes</li>
               </ul>
               <p class="lot-card__price">890 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r1t3.intro">Au sein des Jardins de Sade, T3 traversant lumineux au 1ᵉʳ étage. Volumes anciens préservés, prestations contemporaines, finitions sur mesure définies avec l'acquéreur.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.cypres.intro">Appartement Cyprès — Provence contemporaine, élégance naturelle. Vaste T3 au 1ᵉʳ étage des Jardins de Sade : séjour de 35 m², deux chambres avec leurs salles d'eau, tonalités minérales et bois chaleureux.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 74,37 m²</li>
-                <li><strong>Typologie</strong> : T3 traversant</li>
+                <li><strong>Surface</strong> : 74,90 m²</li>
+                <li><strong>Typologie</strong> : T3 — 2 chambres, 2 salles d'eau</li>
                 <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
-                <li><strong>Exposition</strong> : Sud, traversant</li>
+                <li><strong>Exposition</strong> : Sud — vue sur jardin</li>
+                <li><strong>Séjour</strong> : 35,20 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
                 <li><strong>Prix</strong> : 890 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r1-t3.png" alt="Plan du T3 traversant — R+1">
+                <img src="assets/img/sade/plans/plan-cypres.png" alt="Plan de l'appartement Cyprès — R+1">
+                <img src="assets/img/sade/ambiance/ambiance-cypres.jpg" alt="Planche d'ambiance — Appartement Cyprès">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -215,35 +218,38 @@
 
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T2"
-            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R1-T2N">
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-ROMARIN">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+1</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r1-t2-nord.png" alt="Plan du T2 commercial Nord — R+1 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-romarin.png" alt="Plan de l'appartement Romarin — R+1 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T2 · Nord</span>
-              <h3 class="lot-card__title">T2 — 1ᵉʳ étage</h3>
+              <span class="lot-card__type">T2 · 1 chambre</span>
+              <h3 class="lot-card__title">Appartement Romarin — 1ᵉʳ étage</h3>
               <ul class="lot-card__specs">
-                <li>29,4 m²</li>
-                <li>Vieil Antibes</li>
+                <li>30,65 m²</li>
+                <li>Vue sur la place Nationale</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
-              <p class="lot-card__price">340 000 € <small>FAI</small></p>
+              <p class="lot-card__price">350 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r1t2n.intro">T2 compact côté Nord au 1ᵉʳ étage des Jardins de Sade — idéal pied-à-terre ou investissement locatif au cœur du Vieil Antibes.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.romarin.intro">Appartement Romarin — esprit méditerranéen aux accents de garrigue. T2 au 1ᵉʳ étage des Jardins de Sade : séjour de 15,50 m², chambre paisible, matières naturelles et tonalités végétales.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 29,4 m²</li>
-                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Surface</strong> : 30,65 m²</li>
+                <li><strong>Typologie</strong> : T2 — 1 chambre</li>
                 <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
-                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Vue</strong> : place Nationale</li>
+                <li><strong>Séjour</strong> : 15,50 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
-                <li><strong>Prix</strong> : 340 000 € FAI</li>
+                <li><strong>Prix</strong> : 350 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r1-t2-nord.png" alt="Plan du T2 Nord — R+1">
+                <img src="assets/img/sade/plans/plan-romarin.png" alt="Plan de l'appartement Romarin — R+1">
+                <img src="assets/img/sade/ambiance/ambiance-romarin.jpg" alt="Planche d'ambiance — Appartement Romarin">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -252,35 +258,39 @@
 
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T2"
-            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R1-T2S">
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-LAVANDE">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+1</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r1-t2-sud.png" alt="Plan du T2 commercial Sud — R+1 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-lavande.png" alt="Plan de l'appartement Lavande — R+1 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T2 · Sud</span>
-              <h3 class="lot-card__title">T2 — 1ᵉʳ étage</h3>
+              <span class="lot-card__type">T2 · 1 chambre · terrasse</span>
+              <h3 class="lot-card__title">Appartement Lavande — 1ᵉʳ étage</h3>
               <ul class="lot-card__specs">
-                <li>28,1 m²</li>
-                <li>Vieil Antibes</li>
+                <li>27,80 m² + terrasse</li>
+                <li>Sud/Ouest · vue sur jardin</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
               <p class="lot-card__price">370 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r1t2s.intro">T2 compact côté Sud au 1ᵉʳ étage des Jardins de Sade — exposition lumineuse, idéal pied-à-terre ou investissement locatif au cœur du Vieil Antibes.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.lavande.intro">Appartement Lavande — Provence contemporaine aux tonalités douces. T2 au 1ᵉʳ étage des Jardins de Sade, exposé Sud et Ouest avec terrasse de 5,20 m² et vue sur jardin : séjour lumineux de 15,95 m², chambre au calme.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 28,1 m²</li>
-                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Surface</strong> : 27,80 m²</li>
+                <li><strong>Typologie</strong> : T2 — 1 chambre</li>
                 <li><strong>Étage</strong> : 1ᵉʳ — R+1</li>
-                <li><strong>Exposition</strong> : Sud</li>
+                <li><strong>Exposition</strong> : Sud et Ouest — vue sur jardin</li>
+                <li><strong>Extérieur</strong> : terrasse de 5,20 m²</li>
+                <li><strong>Séjour</strong> : 15,95 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
                 <li><strong>Prix</strong> : 370 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r1-t2-sud.png" alt="Plan du T2 Sud — R+1">
+                <img src="assets/img/sade/plans/plan-lavande.png" alt="Plan de l'appartement Lavande — R+1">
+                <img src="assets/img/sade/ambiance/ambiance-lavande.jpg" alt="Planche d'ambiance — Appartement Lavande">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -291,35 +301,38 @@
           <!-- ============== JARDINS DE SADE — R+2 ============== -->
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T2"
-            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R2-T2N">
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-THYM">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+2</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r2-t2-nord.png" alt="Plan du T2 commercial Nord — R+2 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-thym.png" alt="Plan de l'appartement Thym — R+2 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T2 · Nord</span>
-              <h3 class="lot-card__title">T2 — 2ᵉ étage</h3>
+              <span class="lot-card__type">T2 · 1 chambre</span>
+              <h3 class="lot-card__title">Appartement Thym — 2ᵉ étage</h3>
               <ul class="lot-card__specs">
-                <li>28,6 m²</li>
-                <li>Vieil Antibes</li>
+                <li>29,85 m²</li>
+                <li>Vue sur la place Nationale</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
-              <p class="lot-card__price">355 000 € <small>FAI</small></p>
+              <p class="lot-card__price">365 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r2t2n.intro">T2 compact côté Nord au 2ᵉ étage des Jardins de Sade — bonne luminosité, idéal pied-à-terre ou investissement locatif.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.thym.intro">Appartement Thym — ambiance méditerranéenne chaleureuse. T2 au 2ᵉ étage des Jardins de Sade : séjour de 14,65 m², chambre de près de 10 m², matériaux naturels et lumière du Sud.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 28,6 m²</li>
-                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Surface</strong> : 29,85 m²</li>
+                <li><strong>Typologie</strong> : T2 — 1 chambre</li>
                 <li><strong>Étage</strong> : 2ᵉ — R+2</li>
-                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Vue</strong> : place Nationale</li>
+                <li><strong>Séjour</strong> : 14,65 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
-                <li><strong>Prix</strong> : 355 000 € FAI</li>
+                <li><strong>Prix</strong> : 365 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r2-t2-nord.png" alt="Plan du T2 Nord — R+2">
+                <img src="assets/img/sade/plans/plan-thym.png" alt="Plan de l'appartement Thym — R+2">
+                <img src="assets/img/sade/ambiance/ambiance-thym.jpg" alt="Planche d'ambiance — Appartement Thym">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -328,35 +341,39 @@
 
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T2"
-            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-R2-T2S">
+            data-budget="inf-400k" data-surface="inf-40" data-ref="JDS-MYRTE">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+2</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r2-t2-sud.png" alt="Plan du T2 commercial Sud — R+2 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-myrte.png" alt="Plan de l'appartement Myrte — R+2 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T2 · Sud</span>
-              <h3 class="lot-card__title">T2 — 2ᵉ étage</h3>
+              <span class="lot-card__type">T2 · 1 chambre · terrasse</span>
+              <h3 class="lot-card__title">Appartement Myrte — 2ᵉ étage</h3>
               <ul class="lot-card__specs">
-                <li>28,4 m²</li>
-                <li>Vieil Antibes</li>
+                <li>27,95 m² + terrasse</li>
+                <li>Sud/Ouest · vue sur jardin</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
               <p class="lot-card__price">395 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r2t2s.intro">T2 compact côté Sud au 2ᵉ étage des Jardins de Sade — exposition lumineuse, parfait pour un pied-à-terre ou un investissement locatif.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.myrte.intro">Appartement Myrte — inspiration méditerranéenne, tons frais et naturels. T2 au 2ᵉ étage des Jardins de Sade, exposé Sud et Ouest avec terrasse de 5,20 m² et vue sur jardin : séjour de 15,30 m², chambre lumineuse.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 28,4 m²</li>
-                <li><strong>Typologie</strong> : T2</li>
+                <li><strong>Surface</strong> : 27,95 m²</li>
+                <li><strong>Typologie</strong> : T2 — 1 chambre</li>
                 <li><strong>Étage</strong> : 2ᵉ — R+2</li>
-                <li><strong>Exposition</strong> : Sud</li>
+                <li><strong>Exposition</strong> : Sud et Ouest — vue sur jardin</li>
+                <li><strong>Extérieur</strong> : terrasse de 5,20 m²</li>
+                <li><strong>Séjour</strong> : 15,30 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
                 <li><strong>Prix</strong> : 395 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r2-t2-sud.png" alt="Plan du T2 Sud — R+2">
+                <img src="assets/img/sade/plans/plan-myrte.png" alt="Plan de l'appartement Myrte — R+2">
+                <img src="assets/img/sade/ambiance/ambiance-myrte.jpg" alt="Planche d'ambiance — Appartement Myrte">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -366,36 +383,39 @@
 
           <!-- ============== JARDINS DE SADE — R+3 ============== -->
           <article class="lot-card reveal"
-            data-operation="jardins-sade" data-type="T3"
-            data-budget="700k-1m" data-surface="70-100" data-ref="JDS-R3-T3T">
+            data-operation="jardins-sade" data-type="T4"
+            data-budget="sup-1m" data-surface="70-100" data-ref="JDS-FIGUIER">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+3</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r3-t3-traversant.png" alt="Plan du T3 traversant — R+3 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-figuier.png" alt="Plan de l'appartement Figuier — R+3 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T3 · Traversant</span>
-              <h3 class="lot-card__title">T3 traversant — 3ᵉ étage</h3>
+              <span class="lot-card__type">T4 · 3 chambres · 3 salles d'eau</span>
+              <h3 class="lot-card__title">Appartement Figuier — 3ᵉ étage</h3>
               <ul class="lot-card__specs">
-                <li>81,93 m²</li>
-                <li>Vieil Antibes</li>
+                <li>89,85 m²</li>
+                <li>Sud · vue sur jardin</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
-              <p class="lot-card__price">995 000 € <small>FAI</small></p>
+              <p class="lot-card__price">1 095 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r3t3t.intro">T3 traversant au 3ᵉ étage des Jardins de Sade — vues dégagées sur les toits du Vieil Antibes, double exposition, prestations sur mesure.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.figuier.intro">Appartement Figuier — ambiance méditerranéenne aux tons terreux. Vaste T4 au 3ᵉ étage des Jardins de Sade : séjour de 39 m², trois chambres avec leurs salles d'eau, vues sur les toits du Vieil Antibes.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 81,93 m²</li>
-                <li><strong>Typologie</strong> : T3 traversant</li>
+                <li><strong>Surface</strong> : 89,85 m²</li>
+                <li><strong>Typologie</strong> : T4 — 3 chambres, 3 salles d'eau</li>
                 <li><strong>Étage</strong> : 3ᵉ — R+3</li>
-                <li><strong>Exposition</strong> : double, traversant</li>
+                <li><strong>Exposition</strong> : Sud — vue sur jardin</li>
+                <li><strong>Séjour</strong> : 39,20 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
-                <li><strong>Prix</strong> : 995 000 € FAI</li>
+                <li><strong>Prix</strong> : 1 095 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r3-t3-traversant.png" alt="Plan du T3 traversant — R+3">
+                <img src="assets/img/sade/plans/plan-figuier.png" alt="Plan de l'appartement Figuier — R+3">
+                <img src="assets/img/sade/ambiance/ambiance-figuier.jpg" alt="Planche d'ambiance — Appartement Figuier">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -404,35 +424,37 @@
 
           <article class="lot-card reveal"
             data-operation="jardins-sade" data-type="T3"
-            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-R3-T3N">
+            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-JASMIN">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+3</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r3-t3-nord.png" alt="Plan du T3 Nord — R+3 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-jasmin.png" alt="Plan de l'appartement Jasmin — R+3 · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T3 · Nord</span>
-              <h3 class="lot-card__title">T3 — 3ᵉ étage</h3>
+              <span class="lot-card__type">T3 · 2 chambres · 2 salles d'eau</span>
+              <h3 class="lot-card__title">Appartement Jasmin — 3ᵉ étage</h3>
               <ul class="lot-card__specs">
-                <li>54,26 m²</li>
-                <li>Vieil Antibes</li>
+                <li>45,25 m²</li>
+                <li>Vue sur la place Nationale</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
-              <p class="lot-card__price">640 000 € <small>FAI</small></p>
+              <p class="lot-card__price">535 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r3t3n.intro">T3 côté Nord au 3ᵉ étage des Jardins de Sade — vues sur les toits, atmosphère paisible, conception sur mesure avec l'acquéreur.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.jasmin.intro">Appartement Jasmin — Provence contemporaine, douceur et clarté. T3 au 3ᵉ étage des Jardins de Sade : deux chambres avec leurs salles d'eau, vues sur les toits du Vieil Antibes.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 54,26 m²</li>
-                <li><strong>Typologie</strong> : T3</li>
+                <li><strong>Surface</strong> : 45,25 m²</li>
+                <li><strong>Typologie</strong> : T3 — 2 chambres, 2 salles d'eau</li>
                 <li><strong>Étage</strong> : 3ᵉ — R+3</li>
-                <li><strong>Exposition</strong> : Nord</li>
+                <li><strong>Vue</strong> : place Nationale</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
-                <li><strong>Prix</strong> : 640 000 € FAI</li>
+                <li><strong>Prix</strong> : 535 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r3-t3-nord.png" alt="Plan du T3 Nord — R+3">
+                <img src="assets/img/sade/plans/plan-jasmin.png" alt="Plan de l'appartement Jasmin — R+3">
+                <img src="assets/img/sade/ambiance/ambiance-jasmin.jpg" alt="Planche d'ambiance — Appartement Jasmin">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
@@ -440,36 +462,39 @@
           </article>
 
           <article class="lot-card reveal"
-            data-operation="jardins-sade" data-type="T2"
-            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-R3-DUPLEX">
+            data-operation="jardins-sade" data-type="T3"
+            data-budget="400k-700k" data-surface="40-70" data-ref="JDS-EUCALYPTUS">
             <div class="lot-card__media">
               <span class="lot-card__floor">R+3 · Duplex</span>
               <span class="lot-card__op">Jardins de Sade</span>
-              <img src="assets/img/sade/lots/lot-r3-duplex.png" alt="Plan du T2 duplex mezzanine — R+3 · Les Jardins de Sade" loading="lazy">
+              <img src="assets/img/sade/plans/plan-eucalyptus.png" alt="Plan de l'appartement Eucalyptus — duplex R+3 avec mezzanine · Les Jardins de Sade" loading="lazy">
             </div>
             <div class="lot-card__body">
-              <span class="lot-card__type">T2 · Duplex Mezzanine</span>
-              <h3 class="lot-card__title">T2 duplex — 3ᵉ étage</h3>
+              <span class="lot-card__type">T3 duplex · 2 chambres · terrasse</span>
+              <h3 class="lot-card__title">Appartement Eucalyptus — 3ᵉ étage duplex</h3>
               <ul class="lot-card__specs">
-                <li>45,25 m²</li>
-                <li>Vieil Antibes</li>
+                <li>47,80 m² + terrasse</li>
+                <li>Sud/Ouest · vue sur jardin</li>
+                <li>Antibes — Vieil Antibes</li>
               </ul>
               <p class="lot-card__price">595 000 € <small>FAI</small></p>
               <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
             </div>
             <template class="lot-detail">
-              <p class="lot-detail__intro" data-i18n="lot.jds.r3dpx.intro">T2 duplex avec mezzanine au 3ᵉ étage des Jardins de Sade — atmosphère cosy sous combles, conception sur mesure avec l'acquéreur.</p>
+              <p class="lot-detail__intro" data-i18n="lot.jds.eucalyptus.intro">Appartement Eucalyptus — Provence contemporaine sous les toits. T3 duplex au 3ᵉ étage des Jardins de Sade, exposé Sud et Ouest avec terrasse de 5,20 m² et vue sur jardin : chambre en mezzanine de 15,55 m², atmosphère cosy et lumineuse.</p>
               <ul class="lot-detail__features">
-                <li><strong>Surface</strong> : 45,25 m²</li>
-                <li><strong>Typologie</strong> : T2 duplex avec mezzanine</li>
-                <li><strong>Étage</strong> : 3ᵉ — R+3</li>
+                <li><strong>Surface</strong> : 47,80 m²</li>
+                <li><strong>Typologie</strong> : T3 duplex — 2 chambres, dont 1 en mezzanine</li>
+                <li><strong>Étage</strong> : 3ᵉ — R+3 avec mezzanine</li>
+                <li><strong>Exposition</strong> : Sud et Ouest — vue sur jardin</li>
+                <li><strong>Extérieur</strong> : terrasse de 5,20 m²</li>
                 <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
                 <li><strong>Proposé par</strong> : l'Agence des Remparts</li>
                 <li><strong>Prix</strong> : 595 000 € FAI</li>
               </ul>
               <div class="lot-detail__photos">
-                <img src="assets/img/sade/lots/lot-r3-duplex.png" alt="Plan du T2 duplex — niveau bas, 3ᵉ étage">
-                <img src="assets/img/sade/lots/lot-r3-duplex-mezz.png" alt="Plan du T2 duplex — mezzanine">
+                <img src="assets/img/sade/plans/plan-eucalyptus.png" alt="Plan de l'appartement Eucalyptus — duplex R+3 et mezzanine">
+                <img src="assets/img/sade/ambiance/ambiance-eucalyptus.jpg" alt="Planche d'ambiance — Appartement Eucalyptus">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
