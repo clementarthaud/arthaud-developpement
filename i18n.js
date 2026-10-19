@@ -114,7 +114,12 @@
     'stock.f.surf.3':      { fr: '70 à 100 m²', en: '70 to 100 m²' },
     'stock.f.surf.4':      { fr: 'Plus de 100 m²', en: 'Over 100 m²' },
     'stock.f.reset':       { fr: 'Réinitialiser', en: 'Reset' },
-    'stock.count':         { fr: '9 biens disponibles', en: '9 available properties' },
+    'stock.count':         { fr: '11 biens disponibles', en: '11 available properties' },
+    'stock.f.type.com':    { fr: 'Commerce', en: 'Retail' },
+    'stock.com.type':      { fr: 'Commerce · À louer', en: 'Retail · To let' },
+    'stock.com.resa':      { fr: 'En cours de réservation', en: 'Reservation in progress' },
+    'stock.com1.month':    { fr: 'soit 3 750 € / mois', en: 'i.e. €3,750 / month' },
+    'stock.com2.month':    { fr: 'soit 7 500 € / mois', en: 'i.e. €7,500 / month' },
     'stock.lot.cta':       { fr: 'Demander une information', en: 'Request information' },
     'stock.lot.reserved':  { fr: 'Réservé', en: 'Reserved' },
     'stock.lot.underoffer':{ fr: 'Sous offre', en: 'Under offer' },
@@ -206,33 +211,9 @@
     'op.jds.b1':           { fr: 'Bâtiment historique', en: 'Historic building' },
     'op.jds.b2':           { fr: 'Vente en VIR', en: 'VIR sale' },
     'op.jds.b3':           { fr: 'Sur-mesure acquéreurs', en: 'Tailored for buyers' },
-    'op.jds.cta1':         { fr: 'Voir les 8 lots disponibles', en: 'See the 8 available units' },
+    'op.jds.cta1':         { fr: 'Voir les lots disponibles', en: 'See the available units' },
     'op.jds.cta2':         { fr: 'Demander la grille', en: 'Request the price list' },
     'op.jds.gallery':      { fr: 'Galerie · 21/23 rue Sade', en: 'Gallery · 21/23 rue Sade' },
-
-    /* ---------- Operations: commerces à louer — Jardins de Sade ---------- */
-    'op.stat.reserve':     { fr: 'Réserve', en: 'Storage' },
-    'op.stat.rent':        { fr: 'Loyer annuel', en: 'Annual rent' },
-    'op.jds.com.label':    { fr: 'Commerces à louer · pieds d\u2019immeuble', en: 'Retail spaces to let · ground floor' },
-    'op.jds.com.b3':       { fr: 'Location pure', en: 'Lease only' },
-    'op.jds.com.cta':      { fr: 'Demander une information', en: 'Request information' },
-    'op.jds.com1.eb':      { fr: 'À louer · En cours de réservation', en: 'To let · Reservation in progress' },
-    'op.jds.com1.h3':      { fr: 'Commerce 1 — 21/23 rue Sade', en: 'Retail space 1 — 21/23 rue Sade' },
-    'op.jds.com1.p':       { fr: 'Local commercial en pied d\u2019immeuble des Jardins de Sade : 43,70 m² en rez-de-chaussée, complétés d\u2019une réserve de 45,60 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.',
-                             en: 'Ground-floor retail space at Les Jardins de Sade: 43.70 m² on the ground floor, plus a 45.60 m² basement storage area. Lease only — activities generating noise and/or odour nuisance (bar, restaurant…) are excluded.' },
-    'op.jds.com1.surf':    { fr: '43,70 m² RDC', en: '43.70 m² GF' },
-    'op.jds.com1.res':     { fr: '45,60 m² s.-sol', en: '45.60 m² bsmt' },
-    'op.jds.com1.rent':    { fr: '45 000 €', en: '€45,000' },
-    'op.jds.com1.b1':      { fr: '3 750 € / mois', en: '€3,750 / month' },
-    'op.jds.com1.b2':      { fr: 'En cours de réservation', en: 'Reservation in progress' },
-    'op.jds.com2.eb':      { fr: 'À louer', en: 'To let' },
-    'op.jds.com2.h3':      { fr: 'Commerce 2 — 21/23 rue Sade', en: 'Retail space 2 — 21/23 rue Sade' },
-    'op.jds.com2.p':       { fr: 'Vaste local commercial en pied d\u2019immeuble des Jardins de Sade : 86,21 m² en rez-de-chaussée, complétés d\u2019une réserve de 99,55 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.',
-                             en: 'Large ground-floor retail space at Les Jardins de Sade: 86.21 m² on the ground floor, plus a 99.55 m² basement storage area. Lease only — activities generating noise and/or odour nuisance (bar, restaurant…) are excluded.' },
-    'op.jds.com2.surf':    { fr: '86,21 m² RDC', en: '86.21 m² GF' },
-    'op.jds.com2.res':     { fr: '99,55 m² s.-sol', en: '99.55 m² bsmt' },
-    'op.jds.com2.rent':    { fr: '90 000 €', en: '€90,000' },
-    'op.jds.com2.b1':      { fr: '7 500 € / mois', en: '€7,500 / month' },
 
     /* ---------- Realisations: 9 rue du Bateau ---------- */
     'r.bateau.eb':         { fr: 'Réalisation vendue · 2026', en: 'Sold · 2026' },
@@ -352,7 +333,11 @@
     'lot.jds.jasmin.intro': { fr: 'Appartement Jasmin — Provence contemporaine, douceur et clarté. T3 au 3ᵉ étage des Jardins de Sade : deux chambres avec leurs salles d\u2019eau, vues sur les toits du Vieil Antibes.',
                              en: 'Jasmin apartment — contemporary Provence, softness and light. Two-bedroom on the 3rd floor of Les Jardins de Sade: two bedrooms each with their own shower room, views over the rooftops of Old Antibes.' },
     'lot.jds.eucalyptus.intro': { fr: 'Appartement Eucalyptus — Provence contemporaine sous les toits. T3 duplex au 3ᵉ étage des Jardins de Sade, exposé Sud et Ouest avec terrasse de 5,20 m² et vue sur jardin : chambre en mezzanine de 15,55 m², atmosphère cosy et lumineuse.',
-                             en: 'Eucalyptus apartment — contemporary Provence under the eaves. Two-bedroom duplex on the 3rd floor of Les Jardins de Sade, facing south and west with a 5.20 m² terrace and garden view: 15.55 m² mezzanine bedroom, cosy and bright atmosphere.' }
+                             en: 'Eucalyptus apartment — contemporary Provence under the eaves. Two-bedroom duplex on the 3rd floor of Les Jardins de Sade, facing south and west with a 5.20 m² terrace and garden view: 15.55 m² mezzanine bedroom, cosy and bright atmosphere.' },
+    'lot.jds.com1.intro':  { fr: 'Local commercial en pied d\u2019immeuble des Jardins de Sade : 43,70 m² en rez-de-chaussée, complétés d\u2019une réserve de 45,60 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.',
+                             en: 'Ground-floor retail space at Les Jardins de Sade: 43.70 m² on the ground floor, plus a 45.60 m² basement storage area. Lease only — activities generating noise and/or odour nuisance (bar, restaurant…) are excluded.' },
+    'lot.jds.com2.intro':  { fr: 'Vaste local commercial en pied d\u2019immeuble des Jardins de Sade : 86,21 m² en rez-de-chaussée, complétés d\u2019une réserve de 99,55 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.',
+                             en: 'Large ground-floor retail space at Les Jardins de Sade: 86.21 m² on the ground floor, plus a 99.55 m² basement storage area. Lease only — activities generating noise and/or odour nuisance (bar, restaurant…) are excluded.' }
   };
 
   /* ---------- Apply translations to DOM ---------- */

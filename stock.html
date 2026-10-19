@@ -38,7 +38,7 @@
   </script>
 
   <title data-i18n-title="stock.title">Biens disponibles · Stock · Arthaud Développement</title>
-  <meta name="description" content="Découvrez nos biens disponibles à la vente : appartements rénovés et lots neufs des opérations Les Jardins de Sade et 25 rue Sade (Vue Place Nationale).">
+  <meta name="description" content="Découvrez nos biens disponibles à la vente : appartements rénovés, lots neufs et commerces à louer des opérations Les Jardins de Sade et 25 rue Sade (Vue Place Nationale).">
   <meta name="theme-color" content="#FAFAF7">
   <meta name="google-site-verification" content="bWI9-2ILe3xhB3SdEOzaAUgIBRg1nIc6jAWZ0D2eUNs" />
 
@@ -99,6 +99,7 @@
             <option value="T2">T2</option>
             <option value="T3">T3</option>
             <option value="T4">T4</option>
+            <option value="commerce" data-i18n="stock.f.type.com">Commerce</option>
           </select>
         </div>
 
@@ -131,7 +132,7 @@
     <section style="padding-top: var(--space-7);">
       <div class="container">
 
-        <p id="stock-count" class="stock-count" aria-live="polite" data-i18n="stock.count">9 biens disponibles</p>
+        <p id="stock-count" class="stock-count" aria-live="polite" data-i18n="stock.count">11 biens disponibles</p>
 
         <div class="stock-grid" id="stock-grid">
 
@@ -495,6 +496,79 @@
               <div class="lot-detail__photos">
                 <img src="assets/img/sade/plans/plan-eucalyptus.png" alt="Plan de l'appartement Eucalyptus — duplex R+3 et mezzanine">
                 <img src="assets/img/sade/ambiance/ambiance-eucalyptus.jpg" alt="Planche d'ambiance — Appartement Eucalyptus">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <!-- ============== JARDINS DE SADE — COMMERCES À LOUER ============== -->
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="commerce"
+            data-budget="" data-surface="40-70" data-ref="JDS-COM-1">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">RDC</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/plans/plan-commerce-1.png" alt="Plan du Commerce 1 — rez-de-chaussée · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type" data-i18n="stock.com.type">Commerce · À louer</span>
+              <h3 class="lot-card__title">Commerce 1 — rez-de-chaussée</h3>
+              <ul class="lot-card__specs">
+                <li>43,70 m² + réserve 45,60 m²</li>
+                <li>Antibes — Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">45 000 € / an <small data-i18n="stock.com1.month">soit 3 750 € / mois</small></p>
+              <p class="lot-card__status lot-card__status--reserved" data-i18n="stock.com.resa">En cours de réservation</p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.com1.intro">Local commercial en pied d'immeuble des Jardins de Sade : 43,70 m² en rez-de-chaussée, complétés d'une réserve de 45,60 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 43,70 m² en rez-de-chaussée</li>
+                <li><strong>Réserve</strong> : 45,60 m² en sous-sol</li>
+                <li><strong>Destination</strong> : location pure — activités nuisances sonores/olfactives exclues (bar, restauration…)</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Loyer</strong> : 45 000 € / an — soit 3 750 € / mois</li>
+                <li><strong>Statut</strong> : en cours de réservation</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/plans/plan-commerce-1.png" alt="Plan du Commerce 1 — rez-de-chaussée">
+                <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
+                <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
+              </div>
+            </template>
+          </article>
+
+          <article class="lot-card reveal"
+            data-operation="jardins-sade" data-type="commerce"
+            data-budget="" data-surface="70-100" data-ref="JDS-COM-2">
+            <div class="lot-card__media">
+              <span class="lot-card__floor">RDC</span>
+              <span class="lot-card__op">Jardins de Sade</span>
+              <img src="assets/img/sade/plans/plan-commerce-2.png" alt="Plan du Commerce 2 — rez-de-chaussée · Les Jardins de Sade" loading="lazy">
+            </div>
+            <div class="lot-card__body">
+              <span class="lot-card__type" data-i18n="stock.com.type">Commerce · À louer</span>
+              <h3 class="lot-card__title">Commerce 2 — rez-de-chaussée</h3>
+              <ul class="lot-card__specs">
+                <li>86,21 m² + réserve 99,55 m²</li>
+                <li>Antibes — Vieil Antibes</li>
+              </ul>
+              <p class="lot-card__price">90 000 € / an <small data-i18n="stock.com2.month">soit 7 500 € / mois</small></p>
+              <a href="contact.html" class="btn btn--primary btn--sm listing-cta lot-card__cta" data-i18n="stock.lot.cta">Demander une information</a>
+            </div>
+            <template class="lot-detail">
+              <p class="lot-detail__intro" data-i18n="lot.jds.com2.intro">Vaste local commercial en pied d'immeuble des Jardins de Sade : 86,21 m² en rez-de-chaussée, complétés d'une réserve de 99,55 m² en sous-sol. Location pure — les activités génératrices de nuisances sonores et/ou olfactives (bar, restauration…) sont exclues.</p>
+              <ul class="lot-detail__features">
+                <li><strong>Surface</strong> : 86,21 m² en rez-de-chaussée</li>
+                <li><strong>Réserve</strong> : 99,55 m² en sous-sol</li>
+                <li><strong>Destination</strong> : location pure — activités nuisances sonores/olfactives exclues (bar, restauration…)</li>
+                <li><strong>Programme</strong> : Les Jardins de Sade — 21/23 rue Sade</li>
+                <li><strong>Loyer</strong> : 90 000 € / an — soit 7 500 € / mois</li>
+              </ul>
+              <div class="lot-detail__photos">
+                <img src="assets/img/sade/plans/plan-commerce-2.png" alt="Plan du Commerce 2 — rez-de-chaussée">
                 <img src="assets/img/sade/render.png" alt="Rendu architectural des Jardins de Sade">
                 <img src="assets/img/sade/facade.jpg" alt="Façade existante 21/23 rue Sade">
               </div>
